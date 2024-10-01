@@ -1,6 +1,33 @@
 import React from 'react'
+import './LinkedList.js'
+import{useNavigate} from 'react-router'
+import './Arrays.js'
 import './Course.css'
+import './Stack.js'
+import './Queue.js'
 export default function Course() {
+
+  const navigate=useNavigate();
+
+  const linked=()=>
+  {
+    navigate('/contact/LinkedList')
+  }
+  const array=()=>
+  {
+    
+    navigate('/contact/Arrays')
+  }
+
+  const stack=()=>
+    {
+      
+      navigate('/contact/Stack')
+    }
+    const queue=()=>
+    {
+      navigate('/contact/Queue')
+    }
   return (
     <div>
 
@@ -18,7 +45,7 @@ export default function Course() {
   <div class="card-body">
     <h5 class="card-title">Arrays</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/arrays.html" class="btn btn-primary" style={{backgroundColor:"white",color:"black"}}>Go somewhere</a>
+   <button onClick={array}>Go tO</button>
   </div>
 </div>
 
@@ -27,7 +54,8 @@ export default function Course() {
   <div class="card-body">
     <h5 class="card-title">LinkedList</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" style={{backgroundColor:"white"}}>Go somewhere</a>
+   
+    <button onClick={linked}>Go to</button>
   </div>
 </div>
 
@@ -36,7 +64,7 @@ export default function Course() {
   <div class="card-body">
     <h5 class="card-title">Stack</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/arrays.html" class="btn btn-primary">Go somewhere</a>
+   <button onClick={stack}>Go To</button>
   </div>
 </div>
 </div>
@@ -48,7 +76,7 @@ export default function Course() {
   <div class="card-body">
     <h5 class="card-title">Queue</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/arrays.html" class="btn btn-primary">Go somewhere</a>
+    <button onClick={queue}>Go to</button>
   </div>
 </div>
 

@@ -1,11 +1,14 @@
-import React,{useEffect} from 'react'
+
+import { useNavigate } from 'react-router-dom';
 
 export default function About() {
 
- useEffect=(()=>
+  const navigate = useNavigate();
+const submit=()=>
 {
-  document.title="about"
-})
+
+navigate('/about/AfterForm.js')
+}
   return (
     <div style={{backgroundColor:"#36454F"}}>
 
@@ -14,7 +17,7 @@ export default function About() {
 
         <b><h3>Contact us about E-Learning </h3></b>
         <hr></hr>
-        <form>
+        <form >
 
         <p>E-Learning Academy, makes it easier to administer students and track their progress in real-time. </p>
 
@@ -43,6 +46,7 @@ export default function About() {
 
 Contact us about W3Schools Classrooms plans, or team bulk subscription inquiries. </p>
 <hr/>
+
 <div className="inner">
   <img src="https://imgs.search.brave.com/tOVXp7hP9hwCC167DK8EFJfu_qYzjmfuWBqnqpN6bFw/rs:fit:500:0:0:0/g:ce/aHR0cHM6Ly9jZG4u/dmVjdG9yc3RvY2su/Y29tL2kvcHJldmll/dy0xeC81OC82MC9p/bWFnZS1vZi1hLWJ1/c2luZXNzbWFuLXN0/dWRlbnQtZmluYW5j/aWFsLXJlcG9ydHMt/dmVjdG9yLTMwMDU4/NjAuanBn"></img>
 </div>
@@ -51,15 +55,15 @@ Contact us about W3Schools Classrooms plans, or team bulk subscription inquiries
   Enter your name
 </h6>
 
-<input type="text" required style={{borderRadius:"10px",width:"290px"}}></input>
+<input id="name" type="text" required style={{borderRadius:"10px",width:"290px"}}></input>
 <h6>
   Enter your work email
 </h6>
-<input type="email" required style={{borderRadius:"10px",width:"290px"}}></input>
+<input id="email"  type="email" required style={{borderRadius:"10px",width:"290px"}}></input>
 <h6>
   Select your role
 </h6>
-<form>
+
         <input type="checkbox" id="apple" name="fruit" value="apple"/>
         <label for="apple">Admin</label><br/>
 
@@ -70,12 +74,12 @@ Contact us about W3Schools Classrooms plans, or team bulk subscription inquiries
         <label for="cherry">Teacher Assistant</label><br/>
 
         
-    </form>
+
 
     <h6>
       Type the name of yor organization
     </h6>
-    <input type="text" style={{borderRadius:"10px",width:"290px"}}></input>
+    <input  type="text" style={{borderRadius:"10px",width:"290px"}}></input>
     <br/>
     <h6>
       Please explain how you teach coding today
@@ -92,7 +96,7 @@ Contact us about W3Schools Classrooms plans, or team bulk subscription inquiries
     By sending this form you agree to our <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a>
    <br/>
    <br/>
-    <button  style={{width:"150px",borderRadius:"10px",backgroundColor:"#ff5733",color:"white",border:"2px solid white"
+    <button type="submit" onClick={submit}style={{width:"150px",borderRadius:"10px",backgroundColor:"#ff5733",color:"white",border:"2px solid white"
 }}>Send</button>
 </form>
       </div>
