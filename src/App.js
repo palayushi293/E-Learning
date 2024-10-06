@@ -10,6 +10,10 @@ import Home from './component/Home.js'
 import Stack from './component/Stack.js'
 import Arrays from './component/Arrays.js'
 import Queue from './component/Queue.js'
+import Certificate from './component/Certificate.js'
+import Tree from './component/Tree.js'
+import Graph from './component/Graph.js'
+import GraphTest from './component/GraphTest.js'
 
 function App() {
   return (
@@ -37,6 +41,10 @@ function App() {
           <Route path="/contact/Arrays" element ={<Arrays/>}/>
           <Route path="/contact/Stack" element ={<Stack/>}/>
           <Route path="/contact/Queue" element={<Queue/>}/>
+          <Route path="/certificate" element={<Certificate/>}/>
+          <Route path="/contact/Tree" element={<Tree/>}/>
+          <Route path="/contact/Graph" element={<Graph/>}/>
+          <Route path="/contact/Graph/Test" element={<GraphTest/>}/>
 
           {/*bus yee wala path Nav.js ke to se match hone chaiye hai bikul same to same*/}
         </Routes>

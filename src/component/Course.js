@@ -5,6 +5,9 @@ import './Arrays.js'
 import './Course.css'
 import './Stack.js'
 import './Queue.js'
+import './Tree.js'
+import './Graph.js'
+import './Certificate.js'
 export default function Course() {
 
   const navigate=useNavigate();
@@ -27,6 +30,15 @@ export default function Course() {
     const queue=()=>
     {
       navigate('/contact/Queue')
+    }
+
+    const tree=()=>
+    {
+      navigate('/contact/Tree')
+    }
+    const graph=()=>
+    {
+      navigate('/contact/Graph')
     }
   return (
     <div>
@@ -86,7 +98,7 @@ export default function Course() {
   <div class="card-body">
     <h5 class="card-title">Tree</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/arrays.html" class="btn btn-primary">Go somewhere</a>
+    <button onClick={tree}>GO to</button>
   </div>
 </div>
 
@@ -96,7 +108,7 @@ export default function Course() {
   <div class="card-body">
     <h5 class="card-title">Graph</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="https://docs.oracle.com/javase/tutorial/java/nutsandbolts/arrays.html" class="btn btn-primary">Go somewhere</a>
+   <button onClick={graph}>go</button>
   </div>
 </div>
 
